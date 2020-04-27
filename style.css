@@ -1,0 +1,31 @@
+body, html{
+    margin: 0;
+    padding: 0;
+
+}
+#slider{
+    margin: 50px auto;
+    width: 384px;
+    height: 100px;
+    border: 2px solid red;
+    overflow: hidden;
+}
+#items{
+    width:1152px;
+    position: relative;
+    
+    left: 0;
+    transition: all ease 1s /*что бы картинки плавно переключались
+    но тогда первая картинка переключается рывком, а последуюие плавно
+    что бы это избежать необходимо прописать начальные значение left: 0;*/
+}
+
+#items img{
+    float: left;
+}
+
+#items::after{
+    content:"";
+    display: block;
+    clear: both;
+}
